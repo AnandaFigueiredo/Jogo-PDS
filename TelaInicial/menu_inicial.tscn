@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://b83ldf4c37i56"]
+
+[ext_resource type="Script" uid="uid://d1kpfv6hk4qnn" path="res://TelaInicial/menu_inicial.gd" id="1_uef41"]
+[ext_resource type="Texture2D" uid="uid://d0kokg4hs8ex3" path="res://TelaInicial/fundojogo.jpg" id="1_v5mq7"]
+[ext_resource type="FontFile" uid="uid://fubb5wt28uln" path="res://fonts/Fredoka-Bold.ttf" id="2_uef41"]
+[ext_resource type="Texture2D" uid="uid://doacw4sdllc7o" path="res://TelaInicial/roboAzul-removebg-preview.png" id="3_lgeb0"]
+[ext_resource type="AudioStream" uid="uid://2e3pqtqcbwo6" path="res://audios/titulo.mp3" id="5_5g4i0"]
+[ext_resource type="AudioStream" uid="uid://cxjbpqkht6yms" path="res://audios/jogar.mp3" id="6_xilnp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktf6r"]
+bg_color = Color(0.101960786, 0.07058824, 0.2, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55v0k"]
+bg_color = Color(0.24705882, 0.2901961, 0.65882355, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7490196, 0.90588236, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eap13"]
+bg_color = Color(0.16862746, 0.18039216, 0.36862746, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pme7s"]
+bg_color = Color(0.6039216, 0.34117648, 0.09411765, 1)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7do68"]
+bg_color = Color(1, 0.62352943, 0.2627451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.8901961, 0.7019608, 1)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnvki"]
+bg_color = Color(1, 0.70980394, 0.36078432, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[node name="MenuInicial" type="Control" unique_id=1871901161]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uef41")
+
+[node name="BackgroundImage" type="TextureRect" parent="." unique_id=982810723]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_v5mq7")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=507328211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.14901961)
+
+[node name="SombraTitulo" type="Panel" parent="." unique_id=1279978713]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 48.0
+offset_right = 1098.0
+offset_bottom = 148.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ktf6r")
+
+[node name="CaixaTitulo" type="Panel" parent="." unique_id=726208563]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 40.0
+offset_right = 1090.0
+offset_bottom = 140.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_55v0k")
+
+[node name="Titulo" type="Label" parent="." unique_id=154057250]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 55.0
+offset_right = 1090.0
+offset_bottom = 180.0
+mouse_filter = 0
+theme_override_colors/font_outline_color = Color(0.101960786, 0, 0.74509805, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_uef41")
+theme_override_font_sizes/font_size = 50
+text = "Mundo das Descobertas
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SombraSubtitulo" type="Panel" parent="." unique_id=487355839]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 140.0
+offset_right = 990.0
+offset_bottom = 192.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_eap13")
+
+[node name="Subtitulo" type="Label" parent="." unique_id=359015922]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 140.0
+offset_right = 965.0
+offset_bottom = 192.0
+theme_override_colors/font_outline_color = Color(0.16862746, 0.18039216, 0.36862746, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_uef41")
+theme_override_font_sizes/font_size = 35
+text = "Complete palavras e aprenda sílabas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Robo" type="TextureRect" parent="." unique_id=34751099]
+layout_mode = 0
+offset_left = -33.0
+offset_top = 250.0
+offset_right = 467.0
+offset_bottom = 750.0
+texture = ExtResource("3_lgeb0")
+
+[node name="SombraBotao" type="Panel" parent="." unique_id=696423550]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 294.0
+offset_right = 849.0
+offset_bottom = 424.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pme7s")
+
+[node name="BotaoJogar" type="Button" parent="." unique_id=1576336417]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 280.0
+offset_right = 835.0
+offset_bottom = 410.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.39607844, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_uef41")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_7do68")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tnvki")
+text = "Jogar
+"
+
+[node name="AudioTitulo" type="AudioStreamPlayer2D" parent="." unique_id=441042831]
+stream = ExtResource("5_5g4i0")
+
+[node name="AudioJogar" type="AudioStreamPlayer2D" parent="." unique_id=1418359171]
+stream = ExtResource("6_xilnp")
+
+[connection signal="mouse_entered" from="Titulo" to="." method="_on_titulo_mouse_entered"]
+[connection signal="mouse_entered" from="BotaoJogar" to="." method="_on_botao_jogar_mouse_entered"]
+[connection signal="pressed" from="BotaoJogar" to="." method="_on_botao_jogar_pressed"]

@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://1ifnlejxsptt"]
+
+[ext_resource type="Texture2D" uid="uid://d0kokg4hs8ex3" path="res://TelaInicial/fundojogo.jpg" id="1_2iior"]
+[ext_resource type="Script" uid="uid://b0o4joq21thkt" path="res://Win/tela_vitoria.gd" id="1_mgj6w"]
+[ext_resource type="FontFile" uid="uid://fubb5wt28uln" path="res://fonts/Fredoka-Bold.ttf" id="2_mgj6w"]
+[ext_resource type="Texture2D" uid="uid://doacw4sdllc7o" path="res://TelaInicial/roboAzul-removebg-preview.png" id="3_ywdte"]
+[ext_resource type="Texture2D" uid="uid://drc5d7itt8xlk" path="res://Win/success.png" id="4_buaxv"]
+[ext_resource type="Texture2D" uid="uid://bwdp3g680tdur" path="res://Win/confetti.png" id="5_a0vdj"]
+[ext_resource type="AudioStream" uid="uid://c8c0typxjq155" path="res://audios/fase.mp3" id="7_buaxv"]
+[ext_resource type="AudioStream" uid="uid://dsbv2rs07u5pg" path="res://audios/vitoria.mp3" id="7_ywdte"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktf6r"]
+bg_color = Color(0.101960786, 0.07058824, 0.2, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55v0k"]
+bg_color = Color(0.24705882, 0.2901961, 0.65882355, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7490196, 0.90588236, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pme7s"]
+bg_color = Color(0.6039216, 0.34117648, 0.09411765, 1)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7do68"]
+bg_color = Color(1, 0.62352943, 0.2627451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.8901961, 0.7019608, 1)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnvki"]
+bg_color = Color(1, 0.70980394, 0.36078432, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6d782"]
+bg_color = Color(0.16862746, 0.18039216, 0.36862746, 1)
+
+[node name="MenuInicial" type="Control" unique_id=1871901161]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mgj6w")
+
+[node name="BackgroundImage" type="TextureRect" parent="." unique_id=982810723]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2iior")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=507328211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.14901961)
+
+[node name="SombraTitulo" type="Panel" parent="." unique_id=1279978713]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 48.0
+offset_right = 1098.0
+offset_bottom = 148.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ktf6r")
+
+[node name="CaixaTitulo" type="Panel" parent="." unique_id=726208563]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 40.0
+offset_right = 1090.0
+offset_bottom = 140.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_55v0k")
+
+[node name="Titulo" type="Label" parent="." unique_id=154057250]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 55.0
+offset_right = 1090.0
+offset_bottom = 180.0
+theme_override_colors/font_outline_color = Color(0.101960786, 0, 0.74509805, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_mgj6w")
+theme_override_font_sizes/font_size = 50
+text = "MUITO BEM!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Robo" type="TextureRect" parent="." unique_id=34751099]
+layout_mode = 0
+offset_left = -33.0
+offset_top = 250.0
+offset_right = 467.0
+offset_bottom = 750.0
+texture = ExtResource("3_ywdte")
+
+[node name="SombraBotao" type="Panel" parent="." unique_id=696423550]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 294.0
+offset_right = 849.0
+offset_bottom = 424.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pme7s")
+
+[node name="BotaoContinuar" type="Button" parent="." unique_id=1576336417]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 280.0
+offset_right = 835.0
+offset_bottom = 410.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.39607844, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_mgj6w")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_7do68")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tnvki")
+text = "Próxima fase"
+
+[node name="SombraVitoria" type="Panel" parent="." unique_id=36180194]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 160.0
+offset_right = 990.0
+offset_bottom = 220.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d782")
+
+[node name="MensagemVitoria" type="Label" parent="." unique_id=1858774208]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 160.0
+offset_right = 990.0
+offset_bottom = 220.0
+theme_override_fonts/font = ExtResource("2_mgj6w")
+theme_override_font_sizes/font_size = 40
+text = "Você encontrou o objeto correto!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Trofeu" type="TextureRect" parent="." unique_id=67473558]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 285.0
+offset_right = 950.0
+offset_bottom = 405.0
+texture = ExtResource("4_buaxv")
+expand_mode = 1
+
+[node name="Confete1" type="TextureRect" parent="." unique_id=1192386434]
+layout_mode = 0
+offset_left = 1090.0
+offset_top = 20.0
+offset_right = 1200.0
+offset_bottom = 130.0
+texture = ExtResource("5_a0vdj")
+expand_mode = 1
+
+[node name="Confete2" type="TextureRect" parent="." unique_id=1893363998]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 500.0
+offset_right = 500.0
+offset_bottom = 650.0
+texture = ExtResource("5_a0vdj")
+expand_mode = 1
+
+[node name="Confete3" type="TextureRect" parent="." unique_id=1676135062]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 500.0
+offset_right = 850.0
+offset_bottom = 650.0
+texture = ExtResource("5_a0vdj")
+expand_mode = 1
+
+[node name="AudioBotao" type="AudioStreamPlayer2D" parent="." unique_id=1763561226]
+stream = ExtResource("7_buaxv")
+
+[node name="AudioVitoria" type="AudioStreamPlayer2D" parent="." unique_id=1424750263]
+stream = ExtResource("7_ywdte")
+
+[connection signal="pressed" from="BotaoContinuar" to="." method="_on_botao_continuar_pressed"]
